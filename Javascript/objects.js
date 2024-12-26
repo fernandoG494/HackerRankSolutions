@@ -1,8 +1,13 @@
-function getCount(a, b) {
+function getCount(objects) {
   let counter = 0;
-  if (a == b) {
-    counter;
-  }
+
+  objects.forEach((elements) => {
+    if (elements[0] == elements[1]) {
+      counter++;
+    }
+  });
+
+  return counter;
 }
 
 function main() {
@@ -14,9 +19,7 @@ function main() {
     [4, 5],
   ];
 
-  for (let i = 0; i < objects.length; i++) {
-    getCount(objects[i][0], objects[i][1]);
-  }
+  console.log(getCount(objects));
 }
 
 main();
